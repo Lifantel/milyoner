@@ -28,5 +28,6 @@
   { "id": 27, "levels": [10, 11, 12],   "question": "Which chemical element has the symbol \"W\"?", "options": ["Tungsten", "Tantalum", "Vanadium", "Xenon"], "answer": "A" },
   { "id": 28, "levels": [10, 11, 12],   "question": "What is the largest desert in the world by area?", "options": ["Sahara Desert", "Gobi Desert", "Antarctic Desert", "Arabian Desert"], "answer": "C" },
   { "id": 29, "levels": [11, 12],       "question": "Who composed \"The Four Seasons\"?", "options": ["Johann Sebastian Bach", "Antonio Vivaldi", "Wolfgang Amadeus Mozart", "George Frideric Handel"], "answer": "B" },
-  { "id": 30, "levels": [11, 12],       "question": "Who wrote the novel \"Crime and Punishment\"?", "options": ["Leo Tolstoy", "Anton Chekhov", "Fyodor Dostoevsky", "Ivan Turgenev"], "answer": "C" }
+  { "id": 30, "levels": [11, 12],       "question": "Who wrote the novel \"Crime and Punishment\"?", "options": ["Leo Tolstoy", "Anton Chekhov", "Fyodor Dostoevsky", "Ivan Turgenev"], "answer": "C" },
+  { "id": 31,  "levels": [1, 2],        "question": "en yakışıklı kim", "options": ["Fatih", "Nuri", "Fikri", "Ozan Hoca"], "answer": "D" }
 ]
