@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who Wants to Be a Millionaire? – English Practice</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main id="app">
+
+    <!-- START SCREEN -->
+    <section id="screen-start" class="screen active">
+      <div class="start-card">
+        <div class="logo-ring"><span>₺</span></div>
+        <h1>Who Wants to Be a <em>Millionaire?</em></h1>
+        <p class="tagline">English edition • 12 questions • 4 lifelines • No time limit</p>
+        <button id="btn-start" class="btn-gold" disabled>Start Game</button>
+        <p id="pool-info" class="small-info"></p>
+        <div id="load-error" class="error hidden"></div>
+      </div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="screen-game" class="screen">
+      <div class="game-layout">
+        <div class="main-col">
+
+          <header class="topbar">
+            <div id="lifelines" class="lifelines"></div>
+            <div class="top-right">
+              <span id="prize-chip" class="prize-chip"></span>
+              <button id="btn-walk" class="btn-ghost" title="Leave the game with your current winnings">Take the money</button>
+              <button id="btn-mute" class="btn-icon" title="Sound on/off">🔊</button>
+            </div>
+          </header>
+
+          <div class="question-area">
+            <div id="q-number" class="q-number"></div>
+            <div id="question-box" class="question-box">
+              <span id="question-text"></span>
+              <span id="double-badge" class="double-badge hidden">2x active</span>
+            </div>
+          </div>
+
+          <div id="answers" class="answers">
+            <button class="answer" data-index="0"><span class="inner"><b class="letter">A:</b><span class="text"></span></span></button>
+            <button class="answer" data-index="1"><span class="inner"><b class="letter">B:</b><span class="text"></span></span></button>
+            <button class="answer" data-index="2"><span class="inner"><b class="letter">C:</b><span class="text"></span></span></button>
+            <button class="answer" data-index="3"><span class="inner"><b class="letter">D:</b><span class="text"></span></span></button>
+          </div>
+
+          <div class="action-zone">
+            <div id="confirm" class="confirm hidden">
+              <span id="confirm-text"></span>
+              <div class="confirm-btns">
+                <button id="btn-yes" class="btn-gold small">Final answer</button>
+                <button id="btn-no" class="btn-ghost">Not sure</button>
+              </div>
+            </div>
+            <div id="next-bar" class="hidden">
+              <button id="btn-next" class="btn-gold">Next question →</button>
+            </div>
+            <div id="toast" class="toast hidden"></div>
+          </div>
+        </div>
+
+        <aside class="ladder-wrap">
+          <ol id="ladder" class="ladder"></ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- END SCREEN -->
+    <section id="screen-end" class="screen">
+      <div id="confetti" class="confetti"></div>
+      <div class="start-card">
+        <h2 id="end-title"></h2>
+        <p class="end-label">You take home</p>
+        <div id="end-amount" class="end-amount"></div>
+        <p id="end-message" class="end-message"></p>
+        <button id="btn-restart" class="btn-gold">Play again</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LIFELINE MODAL -->
+  <div id="modal" class="overlay hidden">
+    <div class="modal-card">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+      <div class="timer"><div class="timer-track"><div id="timer-bar"></div></div><span id="timer-text"></span><small>s</small></div>
+      <button id="modal-close" class="btn-gold small">Close</button>
+    </div>
+  </div>
+
+  <!-- WALK AWAY DIALOG -->
+  <div id="walk-dialog" class="overlay hidden">
+    <div class="modal-card small-card">
+      <h2>Take the money?</h2>
+      <p id="walk-text"></p>
+      <div class="confirm-btns">
+        <button id="walk-yes" class="btn-gold small">Yes, I'm leaving</button>
+        <button id="walk-no" class="btn-ghost">Keep playing</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
