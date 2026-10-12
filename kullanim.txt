@@ -1,0 +1,6 @@
+index.html in olduğu dosyaya gelip
+
+python3 -m http.server 8000
+
+
+kapatmak için crtl+c
