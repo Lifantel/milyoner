@@ -4,7 +4,7 @@ import json
 import sys
 from collections import Counter
 
-PATH = "src/data/questions.json"
+PATH = "src/data/questions.json"  #milyoner-main de yani ana klasörde bulunmalı.
 TOTAL = 12          # config.js -> PRIZES.length
 MIN_PER_LEVEL = 15  # hedef: her basamak için en az bu kadar soru
 LETTERS = "ABCD"
