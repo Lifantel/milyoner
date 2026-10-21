@@ -28,5 +28,5 @@ fi
 # Çalıştır
 cd "$DIR"
 echo "Site: http://localhost:$PORT  (durdurmak için Ctrl+C)"
-(sleep 1; xdg-open "http://localhost:$PORT" >/dev/null 2>&1) &
+(sleep 2; xdg-open "http://localhost:$PORT" >/dev/null 2>&1) &
 exec python3 -m http.server "$PORT"
