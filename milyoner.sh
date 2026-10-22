@@ -1,14 +1,15 @@
 #!/bin/sh
-# Kim Milyoner Olmak İster? - indir ve çalıştır (Debian)
 set -e
 
 REPO="https://github.com/Lifantel/milyoner.git"
 DIR="$PWD/milyoner"
 PORT=8000
 
-echo "##############################"
+echo "#################################################"
 echo "İNGİLİZCE PERFORMANS ÖDEVİ"
-echo "##############################"
+echo "NURİ İL / ABDULHADİ ABUŞ / MEHMET FATİH GÜLTEKİN"
+echo "#################################################"
+echo -e '\e]8;;https://github.com/Lifantel/milyoner\a0BSD 2026\e]8;;\a'
 sleep 3
 
 # Gerekli paketler
