@@ -62,13 +62,13 @@ Bu yüzden:
 
 ### Zorluk kademeleri
 
-Joker davranışları basamağa göre üç kademeye ayrılmıştır (`jokers.js`). Soruların zorluğu bu kademelerle **uyumlu** olmalıdır; çünkü jokerler sorunun içeriğine bakmaz, yalnızca basamağa bakar.
+Joker davranışları basamağa göre üç kademeye ayrılmıştır (`jokers.js`). Seyirci jokeri artık sadece 15 saniyelik sayaç ve müzik başlatır; sonuç göstermez (soru sınıfa sorulur). Soruların zorluğu bu kademelerle **uyumlu** olmalıdır; çünkü jokerler sorunun içeriğine bakmaz, yalnızca basamağa bakar.
 
-| Kademe | Basamaklar | Telefon jokeri doğru bilme şansı | Seyirci jokeri doğru şık oranı |
-|---|---|---|---|
-| Kolay | 1–4 | %90 | %65–85 |
-| Orta | 5–8 | %75 | %45–65 |
-| Zor | 9–12 | %60 | %28–48 |
+| Kademe | Basamaklar | Telefon jokeri doğru bilme şansı |
+|---|---|---|
+| Kolay | 1–4 | %90 |
+| Orta | 5–8 | %75 |
+| Zor | 9–12 | %60 |
 
 Güvenli basamaklar 4 ve 8'dir (`SAFE_LEVELS`). Bu basamaklara denk gelen sorular, oyuncunun parasını garantilediği için özellikle **net ve tartışmasız** olmalıdır.
 
