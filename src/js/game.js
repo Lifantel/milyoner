@@ -1,6 +1,6 @@
 import { PRIZES, SAFE_LEVELS, TOTAL, TIMES, SUSPENSE_MS, QUESTIONS_URL, ICONS, fmt, url } from './config.js';
 import * as sound from './audio.js';
-import { loadQuestions, pickQuestion } from './questions.js';
+import { loadQuestions, pickQuestion, loadSeen } from './questions.js';
 import { fiftyFifty, phoneFriend } from './jokers.js';
 
 const $ = (s) => document.querySelector(s);
@@ -8,6 +8,7 @@ const $$ = (s) => [...document.querySelectorAll(s)];
 const LETTERS = ['A', 'B', 'C', 'D'];
 
 let pool = [];
+let seen = new Set(); // question ids from earlier games (kept in localStorage)
 let timeouts = [];
 let modalInterval = null;
 
@@ -160,7 +161,8 @@ function startGame() {
 function nextQuestion(first = false) {
   if (!first) sound.stop('correct');
   state.level++;
-  const q = pickQuestion(pool, state.level, state.used);
+  if (first) seen = loadSeen();
+  const q = pickQuestion(pool, state.level, state.used, seen);
   state.used.add(q.id);
   Object.assign(state, {
     current: q, selected: null, locked: false, answeredCorrect: false, doubleActive: false
