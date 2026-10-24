@@ -1,8 +1,8 @@
 // ============================================================
-//  GAME SETTINGS  –  change values here, no need to touch game.js
+//  GAME SETTINGS 
 // ============================================================
 
-export const CURRENCY = '₺';
+export const CURRENCY = '$';
 
 // Prize for each question (12 questions)
 export const PRIZES = [
