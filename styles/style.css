@@ -257,19 +257,6 @@ h1 em { font-style: normal; color: var(--gold); display: block; font-size: 1.25e
 .bubble.friend { align-self: flex-start; background: #1f2a7a; border: 1px solid rgba(255,255,255,.25); border-bottom-left-radius: 4px; }
 .bubble b { color: var(--gold); }
 
-/* audience */
-.hint { opacity: .85; margin-bottom: 8px; }
-.bars { display: flex; justify-content: center; align-items: flex-end; gap: 26px; height: 230px; padding-top: 6px; }
-.bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; width: 60px; gap: 6px; }
-.bar-track { flex: 1; width: 100%; display: flex; align-items: flex-end; }
-.bar {
-  width: 100%; height: 0; border-radius: 8px 8px 0 0;
-  background: linear-gradient(180deg, #5d8bff, #1b3bd0); transition: height 3s cubic-bezier(.2,.8,.2,1);
-}
-.bar-col .pct { font-weight: 800; font-size: 1rem; }
-.bar-col .lt { color: var(--orange); font-weight: 800; font-size: 1.2rem; }
-.bar-col.out { opacity: .35; }
-
 /* ---------- animations ---------- */
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 @keyframes pop { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
@@ -290,5 +277,4 @@ h1 em { font-style: normal; color: var(--gold); display: block; font-size: 1.25e
   .answer { height: 56px; }
   .lifeline { width: 62px; height: 46px; }
   .topbar { justify-content: center; }
-  .bars { gap: 14px; }
 }
