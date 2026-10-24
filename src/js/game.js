@@ -1,7 +1,7 @@
 import { PRIZES, SAFE_LEVELS, TOTAL, TIMES, SUSPENSE_MS, QUESTIONS_URL, ICONS, fmt, url } from './config.js';
 import * as sound from './audio.js';
 import { loadQuestions, pickQuestion } from './questions.js';
-import { fiftyFifty, phoneFriend, askAudience } from './jokers.js';
+import { fiftyFifty, phoneFriend } from './jokers.js';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -109,7 +109,7 @@ function buildLifelines() {
   const defs = [
     ['fifty', '50:50 – removes two wrong answers'],
     ['phone', 'Phone a friend (45 s)'],
-    ['audience', 'Ask the audience (35 s)'],
+    ['audience', 'Ask the audience (15 s)'],
     ['double', '2x – a second chance if your first answer is wrong']
   ];
   const wrap = $('#lifelines');
@@ -438,29 +438,8 @@ function openPhone() {
 }
 
 function openAudience() {
-  const q = state.current;
-  const av = available();
-  const votes = askAudience(q.answerIndex, av, state.level);
+  // Only a 15 s countdown + music; the question is put to the class in person.
   openModal('👥 Ask the Audience', TIMES.audience, 'audience');
-
-  $('#modal-body').innerHTML =
-    `<p class="hint" id="aud-hint">The audience is voting…</p>
-     <div class="bars">${LETTERS.map((l, i) => `
-       <div class="bar-col ${av.includes(i) ? '' : 'out'}">
-         <span class="pct" id="pct-${i}">${av.includes(i) ? '…' : '–'}</span>
-         <div class="bar-track"><div class="bar" id="bar-${i}"></div></div>
-         <span class="lt">${l}</span>
-       </div>`).join('')}
-     </div>`;
-
-  later(() => {
-    $('#aud-hint').textContent = 'Results are in!';
-    votes.forEach((v, i) => {
-      if (!av.includes(i)) return;
-      $(`#bar-${i}`).style.height = v + '%';
-      $(`#pct-${i}`).textContent = v + '%';
-    });
-  }, 9000);
 }
 
 /* ---------------------------------------------------------- TOAST */

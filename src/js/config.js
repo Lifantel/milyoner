@@ -19,7 +19,7 @@ export const TOTAL = PRIZES.length;
 // Lifeline timers (seconds) – the only timed parts of the game
 export const TIMES = {
   phone: 45,
-  audience: 35
+  audience: 15
 };
 
 // Suspense time (ms) between "Final answer" and the reveal
