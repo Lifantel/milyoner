@@ -2,7 +2,7 @@
 //  GAME SETTINGS 
 // ============================================================
 
-export const CURRENCY = 'IRR';
+export const CURRENCY = '';
 
 // Prize for each question (12 questions)
 export const PRIZES = [
